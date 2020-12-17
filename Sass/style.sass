@@ -1,0 +1,219 @@
+$hoverColor: rgba(26, 176, 206, 1)
+$textColor: rgba(58, 64, 71, 1)
+@mixin button
+    padding: 13px 22px
+    line-height: 19px
+    background-color: $hoverColor
+    color: #fff
+    font-weight: 600
+    border: none
+    margin-top: 27px
+    &:focus
+        outline: none
+    &:hover
+        background-color: lighten($hoverColor, 10%)
+*
+    font-family: 'Clear Sans'
+    margin: 0
+    padding: 0
+.header_descr p
+    text-align: center
+    color: #3A4047
+    &:nth-child(1)
+        font-size: 16px
+        line-height: 19px
+    &:nth-child(2)
+        font-size: 14px
+        line-height: 16px
+        font-weight: 600
+.links
+    width: 100%         
+    position: relative
+    height: 100%
+.f_link
+    position: absolute
+    top: 0
+    left: 0
+.s_link
+    position: absolute
+    top: 0
+    right: 64px
+.number
+    position: absolute
+    bottom: 0
+    right: 64px
+    display: inline
+    height: 50px
+    width: 150px
+    .num
+        display: inline
+.backet
+    position: absolute
+    top: 20px
+    right: 0
+
+.nav
+    display: flex
+    justify-content: space-between
+    flex-direction: row
+    &_link
+        font-size: 15px
+        color: $textColor
+        font-weight: 600
+        text-align: center
+        line-height: 34px
+        position: relative
+        padding: 0 35px
+        border-top: 1px solid transparent
+        &::after
+            position: absolute
+            right: 0
+            top: 11px
+            content: ''
+            display: block
+            width: 2px
+            height: 13px
+            background-color: rgba(232, 237, 242, 1)
+        &:last-child
+            &::after
+                display: none
+        &:hover
+            text-decoration: none
+            color: $hoverColor
+            border-top: 1px solid $hoverColor
+
+.poligr
+    margin-top: 10px
+    background: url('/images/main/bg.png') center ( center / cover) no-repeat
+    min-height: 500px
+    text-align: center
+    padding: 150px 0 140px 0
+    color: #fff
+    &_h1
+        font-size: 53px
+        &::after
+            margin: 0 auto
+            content: ''
+            display: block
+            width: 120px
+            height: 2px
+            background-color: #fff
+    &_h4
+        font-size: 24px
+        font-weight: 400
+    &_btn
+        @include button
+
+.label
+    margin: 0
+    text-align: center
+    font-size: 36px
+    color: $textColor
+    font-weight: 400
+.prod
+    padding-top: 29px
+    &_item
+        margin-top: 35px
+        position: relative
+        height: 291px
+        padding: 25px 25px
+        border: 1px solid rgba(0, 0, 0, 0.05)
+    &_descr
+        position: absolute
+        top: 25px
+        right: 0
+        width: 68%
+        height: 50%
+    &_h5
+        font-size: 16px
+        color: $textColor
+    &_link
+        display: inline-block
+        font-size: 14px
+        color: $textColor
+        line-height: 35px
+.we
+    min-height: 280px
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05)
+    padding-top: 32px
+    &_title
+        margin-top: 13px
+        text-align: center
+        font-size: 24px
+        color: $textColor
+        font-weight: 400
+    &_descr
+        margin-top: 34px
+        font-size: 14px
+        color: $textColor
+        font-weight: 400
+.news
+    padding-top: 33px
+    .nmargin
+        padding: 0
+    &_item
+        min-height: 170px
+        margin-top: 50px
+        text-align: center
+        border-top: 1px solid transparent
+        padding-top: 29px
+        &:hover
+            box-shadow: 0 14px 24px rgba(0, 0, 0, 0.05)
+            border-top: 1px solid $hoverColor 
+            cursor: pointer
+            .news_descr
+                color: $hoverColor
+                text-decoration: underline
+    &_date
+        font-size: 14px
+        color: #BEC7D1
+    &_descr
+        margin-top: 14px
+        font-size: 16px
+        color: $textColor
+    &_btn
+        display: block
+        padding: 6px 22px
+        line-height: 19px
+        background-color: #fff
+        color: $hoverColor
+        font-weight: 400
+        border: 1px solid $hoverColor
+        margin: 51px auto 0 auto
+        transition: color 0.4s, border-color 0.4s
+        &:focus
+            outline: none
+        &:hover
+            color: #EC87C0
+            border-color: #EC87C0
+.footer
+    padding: 30px 0
+    margin-top: 49px
+    height: 159px
+    background-color: rgba(0, 0, 0, 0.05)
+    &_p
+        font-size: 14px
+        font-weight: 400
+        color: $textColor
+    &_link_block
+        float: left
+        display: inline-block
+        width: 50%
+        &:last-child
+            .footer_links
+                padding-left: 45px 
+        .nmargin
+            margin: 0
+    &_links
+        display: block
+        font-size: 14px
+        color: $textColor
+        margin-top: 16px
+        &:hover
+            color: $hoverColor
+            text-decoration: underline
+    &_cont
+        float: left
+        display: inline
+            
+    
